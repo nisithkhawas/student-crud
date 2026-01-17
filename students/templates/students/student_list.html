@@ -1,0 +1,5 @@
+{% for s in students %}
+<p>{{ s.name }} - {{ s.email }}</p>
+<a href="{% url "student_update" s.id %}">EDIT</a>|
+<a href="{% url "student_delete" s.id %}">DELETE</a>|
+{% endfor %}

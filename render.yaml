@@ -1,0 +1,6 @@
+services:
+- type:web
+    name:student-crud
+    env:python
+    buildCommand: pip3 install -r requirements.txt
+    startCommand: gunicorn student_project.wsgi:application
